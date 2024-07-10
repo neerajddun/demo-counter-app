@@ -7,5 +7,10 @@ pipeline {
                 git changelog: false, poll: false, url: 'https://github.com/neerajddun/demo-counter-app.git'
             }
         }
+        stage('Unit Test') {
+            steps {
+                sh 'mvn Test'
+            }
+        }
     }
 }
